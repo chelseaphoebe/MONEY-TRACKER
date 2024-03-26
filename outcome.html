@@ -22,6 +22,17 @@
             class="d-inline-block align-text-top"
           />
         </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -101,6 +112,12 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
     <script>
       $(document).ready(function () {
         var username = localStorage.getItem("username");
@@ -131,9 +148,9 @@
             localStorage.setItem("outcomeData", JSON.stringify(outcomeData));
 
             // update balance
-            var balance = parseFloat(localStorage.getItem("balance") || 0); 
+            var balance = parseFloat(localStorage.getItem("balance") || 0);
             balance -= transactionNominal;
-            localStorage.setItem("balance", balance); 
+            localStorage.setItem("balance", balance);
 
             //  transaction success alert
             alert("Outcome Transaction Successful!");
